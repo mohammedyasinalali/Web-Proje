@@ -23,26 +23,22 @@
 
     <!-- Menu Çubuğu -->
     <nav class="navbar navbar-expand-lg ">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                MOHAMMED
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collpase" data-target="#navbarNav"
-                aria-expanded="false" aria-label="Toggle-navigation">
-                <span calss="navbar-toggler-icon"></span>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MOHAMMED</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="#hakkinda" class="nav-link smoothScrol">Hakkında</a>
+                        <a href="index.html" class="nav-link smoothScrol active">Hakkında</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#ozgecmis" class="nav-link smoothScrol">Özgeçmiş</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sehirim" class="nav-link smoothScroll">Şehirim</a>
+                        <a href="sehirim.html" class="nav-link smoothScroll">Şehirim</a>
                     </li>
 
                     <li class="nav-item">
@@ -57,13 +53,104 @@
                         <a href="#iletisim" class="nav-link smoothScroll">İletişim</a>
                     </li>
                 </ul>
-                
+
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
                     <a href="#" class="custom-btn btn" download>CV İndir</a>
                 </div>
             </div>
         </div>
     </nav>
+
+
+    <!-- Hero -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="intro">
+
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-lg-5 col-md-5 col-10">
+                    <img src="image/photo.jpg" class="img.fluid" alt="my-photo">
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
+                    <div class="hero-text">
+
+                        <h1 class="hero-title">Mohammed Yasin Alali</h1>
+
+                        <a href="#" class="email-link">
+                            mohammadyasinalali@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="wave">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </section>
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h3 class="mb-4">Kendim Hakkında</h3>
+                    <p>Ben Muhammed Yasin Elali Türkiye'de Sakarya üniversitesi bilgisayar mühendisliği öğrencisiyim.
+                    </p>
+                    <p>Bu web teknoloji projesi örneğidir. Hayatımı,şehirimi, hobilerimi ve yaşadığım
+                        olayları anlatan kişisel bir web sayfasıdır.</p>
+
+                    <ul class="mt-4 mb-5 mb-lg-0 profile-list list-unstyled">
+                        <li><strong>Adı Soyadı :</strong>Muhammed Yasin Elali</li>
+
+                        <li><strong>Doğum Tarihi :</strong>13 Kasım 2004</li>
+
+                        <li><strong>Uyruk :</strong>Suriye</li>
+
+                        <li><strong>Doğum Yeri :</strong>Halep</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5 mx-auto col-md-6 col-12">
+                    <img src="image/photo2.jpg" class="about-image img-fluid" alt="my photo2" height="500px"
+                        width="800ox">
+                </div>
+            </div>
+            <div class="row about-third">
+                <div class="col-lg-4 col-12">
+                    <h3>Yaratıcılarım</h3>
+                    <p>2004 yılında Suriye'nin Halep kentinde doğan hırslı bir genç. Halep'te ilk eğitim tamamladıktan
+                        sonra akademik kariyerini Türkiye'de sürdürmek için taşındı.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Akademik Hayatım</h3>
+                    <p>Türkiye'ye ilk geldiğimden beri tüm eğitim hayatımı burada tamamladım. Ortaokul ve liseyi burada
+                        okudum.
+                        Daha sonra YÖS (Yabancı öürenciler sınavı) sınavına girdim ve maalesef istediğim bölümü
+                        kazanamadım.
+                        Bu nedenle bir sonraki yıl tekrar sınava girdim ve şu anda Sakarya Üniversitesi'nde Bilgisayar
+                        Mühendisliği okuyorum.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <h3>Hobilerim</h3>
+                    <p>Boş zamanlarımda birçok farklı hobi ile uğraşıyorum. En sevdiğim hobilerimden biri kitap okumak.
+                        Özellikle bilim kurgu,
+                        fantastik ve tarih kitaplarını okumayı seviyorum.
+                        Kitap okumak beni farklı dünyalara götürüyor ve hayal gücümü besliyor.
+                        Diğer bir hobim ise spor yapmak. Futbol, ​​basketbol ve voleybol oynamayı seviyorum.
+                        Spor yapmak hem bedenimi hem de zihnimi zinde tutuyor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mailfooter">
+        <p>mohammadyasinalali@gmail.com</p>
+    </footer>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 

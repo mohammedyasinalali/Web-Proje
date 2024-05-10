@@ -1,3 +1,32 @@
+:root {
+    --primary-color: #004aad;
+    --yellow-color: #f2c31a;
+    --dark-color: #010101;
+    --white-color: #fff;
+    --btn-color: #1578f9;
+
+    --gray-color: #909090;
+    --p-color: #7d7a7a;
+
+    --font-weight-bold: 600;
+    --font-weight-normal: 400;
+    --font-weight-light: 300;
+
+    --h1-font-size: 56px;
+    --h2-font-size: 48px;
+    --h3-font-size: 38px;
+    --h4-font-size: 34px;
+    --h5-font-size: 30px;
+    --h6-font-size: 24px;
+    --p-font-size: 18px;
+    --base-font-size: 16px;
+    --button-font-size: 20px;
+
+    --border-radius-large: 100%;
+    --border-radius-medium: 80px;
+    --border-radius-small: 40px;
+}
+
 @font-face {
     font-family: 'Plain';
     src: url('../localfonts/Plain-Regular.woff2') format('woff2'),
@@ -22,32 +51,61 @@
     font-style: normal;
 }
 
-:root {
-    --primary-color: #004aad;
-    --yellow-color: #f2c31a;
-    --dark-color: #010101;
+html,
+body {
+    height: 100%;
+}
 
-    --gray-color: #909090;
-    --p-color: #7d7a7a;
+body {
+    background: radial-gradient(rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+}
 
-    --font-weight-bold: 600;
-    --font-weight-normal: 400;
-    --font-weight-light: 300;
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+}
 
-    --h1-font-size: 56px;
-    --h2-font-size: 48px;
-    --h3-font-size: 38px;
-    --h4-font-size: 34px;
-    --h5-font-size: 30px;
-    --h6-font-size: 24px;
-    --p-font-size: 18px;
-    --base-font-size: 16px;
-    --button-font-size: 20px;
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+}
 
-    --border-radius-large: 100%;
-    --border-radius-medium: 80px;
-    --border-radius-small: 40px;
+.wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+}
 
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate(0, -30px);
+    }
+
+    50% {
+        transform: translate(0, 5px);
+    }
 }
 
 body {
@@ -90,6 +148,8 @@ p {
     line-height: 2em;
 }
 
+
+
 .section-padding {
     padding: 6rem 0;
 }
@@ -105,18 +165,86 @@ p {
 
 /* CUSTOM BUTTON */
 .custom-btn {
-    background: var(--primary-color);
+    background-color: var(--btn-color);
     border: none;
     border-radius: var(--border-radius-medium);
     color: var(--yellow-color);
     letter-spacing: 0.2px;
-    padding: 6px 36px 10px 36px;
+    padding: 6px 36px;
     font-size: var(--button-font-size);
     white-space: nowrap;
 }
 
 .custom-btn:hover,
 .custom-btn:focus {
+    background: var(--primary-color);
+    color: var(--yellow-color);
+}
+
+/* General */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
     color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+a:hover {
+    color: var(--white-color);
+}
+
+/* Menu */
+
+.navbar {
     background: var(--yellow-color);
+    padding: 0.3rem 1rem;
+    z-index: 99;
+}
+
+.navbar.scroll {
+    background: var(--menu-bg-color);
+    padding: 0.5rem 1rem;
+    position: fixed;
+    opacity: 1;
+}
+
+.navbar-brand {
+    font-weight: var(--font-weight-light);
+    font-size: var(--h4-font-size);
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 35px;
+    outline: none;
+}
+
+.hero .container .row img {
+    width: 100%;
+}
+
+.mailfooter p {
+    color: var(--primary-color);
+    background-color: var(--yellow-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 0;
 }
