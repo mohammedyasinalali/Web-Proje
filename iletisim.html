@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="CSS/iletisim.css">
 </head>
 
-<body>  
+<body>
 
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
@@ -27,13 +27,13 @@
                     <li class="nav-item">
                         <a href="index.html" class="nav-link smoothScrol active">Hakkında</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a href="ozgecmis.html" class="nav-link smoothScroll">Özgeçmis</a>
-                    </li> 
-                    
+                    </li>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link smoothScroll">Şehirim</a>
+                        <a href="sehirim.html" class="nav-link smoothScroll">Şehirim</a>
                     </li>
                     <li class="nav-item">
                         <a href="mirasimiz.html" class="nav-link smoothScroll">Mirasimiz</a>
@@ -42,16 +42,23 @@
                         <a href="#ilgialanlarim" class="nav-link smoothScroll">İlgi Alanlarım</a>
                     </li>
                     <li class="nav-item">
-                        <a style="color:#004aad ;" href="iletisim.html" class="nav-link smoothScroll">İletişim</a>
+                        <a style="color: #004aad;" href="iletisim.html" class="nav-link smoothScroll">İletişim</a>
                     </li>
                 </ul>
-
+                
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
                     <a href="giris.html" class="custom-btn btn">Giriş Yap</a>
                 </div>
             </div>
         </div>
     </nav>
+    <!-- wave -->
+    <section class="wave">
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </section>
     <section class="site-section bg-light">
         <div class="container mb-5">
             <div class="row">
@@ -142,6 +149,8 @@
             </div>
         </div>
     </section>
+
+
     <script>
         /* https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript burdan alındı kod  */
         const validateEmail = function(email) {
@@ -166,14 +175,18 @@
                 alert("Bütün Alanları Doldurmak Zorunludur.!");
             }
             if (!validateEmail(email)) {
-                alert("Email formatında degıl !");
+                alert("Email formatında değil !");
 
             } else {
                 sendBtn.setAttribute('type', 'submit');
             }
         }
     </script>
-        <script src="js/bootstrap.js"></script>
-</body>
+   <!-- SCRIPTS -->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/smoothscroll.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script src="js/custom.js"></script></body>
 
 </html>

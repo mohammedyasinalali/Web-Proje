@@ -50,43 +50,6 @@
     font-weight: bold;
     font-style: normal;
 }
-
-/* wave */
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    background: radial-gradient(rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #b7e8eb 100%);
-}
-
-.ocean {
-    height: 5%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: var(--primary-color);
-}
-
-.wave {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
-    position: absolute;
-    top: -198px;
-    left: 0;
-    height: 198px;
-    transform: translate(0, 0, 0);
-    animation: wave 7s ease infinite;
-}
-
-.wave:nth-of-type(2) {
-    top: -168px;
-    animation: swell 4s ease infinite;
-    opacity: 1;
-}
-
 @keyframes wave {
     0% {
         margin-left: 0;
@@ -112,55 +75,6 @@ body {
 body {
     font-family: var(--base-font-size);
 }
-
-/* tipografi */
-
-h1 {
-    font-size: var(--h1-font-size);
-}
-
-h1,
-h3 {
-    font-weight: var(--font-weight-light);
-}
-
-h3 {
-    font-size: var(--h3-font-size);
-}
-
-h4 {
-    font-size: var(--h4-font-size);
-}
-
-h5 {
-    font-size: var(--h5-font-size);
-}
-
-h6 {
-    font-weight: var(--font-weight-bold);
-    font-size: var(--h6-font-size);
-}
-
-p {
-    color: var(--p-color);
-    font-size: var(--p-font-size);
-    font-weight: var(--font-weight-light);
-    letter-spacing: 0.3px;
-    line-height: 2em;
-}
-
-.section-padding {
-    padding: 6rem 0;
-}
-
-.custom-icon {
-    font-size: 12px;
-    position: relative;
-    bottom: 3px;
-    left: 5px;
-    transform: rotate(-25deg);
-}
-
 
 /* CUSTOM BUTTON */
 .custom-btn {
@@ -245,7 +159,6 @@ a:hover {
     padding: 10px 15px !important;
     resize: none;
     outline: 0;
-    border: 1px solid #ced4da;
 }
 
 .form-group select {
@@ -266,4 +179,49 @@ a:hover {
 .buttons {
     display: flex;
     justify-content: center;
+}
+/* wave */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #b7e8eb 100%);
+}
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
 }
