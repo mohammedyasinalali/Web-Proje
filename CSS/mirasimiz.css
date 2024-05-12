@@ -188,43 +188,6 @@ ul {
     color: var(--yellow-color);
 }
 
-/* hero */
-
-.hero .container .row .herod .hero-text a.email-link {
-    color: red;
-}
-
-/* General */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-*::before,
-*::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.4s linear;
-}
-
-a:hover {
-    color: var(--primary-color);
-}
-
-
-/* gvfd */
-
-.container .row .kendim {
-    font-size: 30px;
-}
-
 /* Menu */
 
 .navbar {
@@ -271,8 +234,76 @@ section .container h2 {
 
 .hakkimda .container div {
     display: flex;
+    justify-content: space-between;
+    margin-top:15px ;
+    margin-bottom:25px ;
+}
+
+.hakkimda .container div img{
+    border-radius: 6px;
 }
 
 .hakkimda .container div .title {
     color: #004aad;
 }
+
+.img-wrapper {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+}
+
+.img-wrapper img {
+    border-radius: 20%;
+    width: 30%;
+    height: 250px;
+}
+
+@media only screen and (max-width: 800px) {
+    .img-wrapper {
+        flex-direction: column;
+    }
+    .img-wrapper img {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/*---------------------------------------
+     TESTIMONIALS               
+  -----------------------------------------*/
+  
+  .testimonials-image {
+    margin: 0 1rem 1rem 1rem;
+    width: 250px;
+  }
+  
+  .testimonials-image img {
+    border-radius: var(--border-radius-medium);
+  }
+  
+  .testimonials-info {
+    width: 100%;
+  }
+  
+  .testimonials .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 2rem;
+  }
+  
+  .testimonials .owl-theme .owl-dots .owl-dot {
+    outline: none;
+  }
+  
+  .testimonials .owl-theme .owl-dots .owl-dot span {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+  }
+  
+  .testimonials .owl-theme .owl-dots .owl-dot.active span,
+  .testimonials .owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--primary-color);
+  }
+
+.testimonials 
+

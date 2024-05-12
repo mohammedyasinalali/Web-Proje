@@ -63,7 +63,7 @@
 }
 
 .login-block .input-group-addon {
-    color: #29aafe;
+    color: #004aad;
     font-size: 19px;
     opacity: .5
 }
@@ -71,8 +71,8 @@
 .login-block .btn-block {
     margin-top: 30px;
     padding: 15px;
-    background: #29aafe;
-    border-color: #29aafe;
+    background: #004aad;
+    border-color: #004aad;
 }
 
 .login-block .hr-xs {
@@ -110,7 +110,7 @@
 }
 
 .login-links a:hover {
-    color: #29aafe;
+    color: #004aad;
     opacity: 1
 }
 
@@ -169,7 +169,7 @@
 .social-icons a:focus,
 .social-icons a:hover {
     color: #fff;
-    background-color: #29aafe
+    background-color: #004aad
 }
 
 .social-icons.size-sm a {
@@ -180,7 +180,7 @@
 }
 
 .social-icons a.facebook:hover {
-    background-color: #3b5998
+    background-color: #004aad
 }
 
 .social-icons a.rss:hover {
@@ -192,9 +192,9 @@
 }
 
 .social-icons a.twitter:hover {
-    background-color: #00aced
+    background-color: #004aad
 }
 
 .social-icons a.linkedin:hover {
-    background-color: #007bb6
+    background-color: #004aad
 }

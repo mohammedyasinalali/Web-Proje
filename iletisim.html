@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim sayfası </title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/Navbar.css">
+    <link rel="stylesheet" href="CSS/iletisim.css">
+</head>
+
+<body>  
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a style="color: #004aad;" class="navbar-brand" href="#">MOHAMMED</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothScrol active">Hakkında</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="ozgecmis.html" class="nav-link smoothScroll">Özgeçmis</a>
+                    </li> 
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link smoothScroll">Şehirim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mirasimiz.html" class="nav-link smoothScroll">Mirasimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ilgialanlarim" class="nav-link smoothScroll">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:#004aad ;" href="iletisim.html" class="nav-link smoothScroll">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="giris.html" class="custom-btn btn">Giriş Yap</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="site-section bg-light">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-12 mb-5">
+                    <div class="section-heading text-center">
+                        <h1 class="text-muted mt-3">
+                            <center>İLETİŞİM</center>
+                        </h1>
+                        <form action="iletisim.php" method="POST" id="form" novalidate="" name="form">
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input id="ad" class="form-control" type="text" placeholder="Adınız..." name="ad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-3">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input id="soyad" class="form-control" placeholder="Soyadınız..." type="text" name="soyad">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <input class="form-control" type="text" placeholder="Doğum Tarihiniz..." name="doğum" id="doğum">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <select class="form-control" name="eğitim" id="eğitim">          
+                          <option>İlkokul</option>
+                          <option>Ortaokul</option>
+                          <option>Lise</option>
+                          <option>Üniversite</option>
+                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5 mx-1">
+                                        <input id="email" class="form-control" placeholder="Email Adresiniz..." type="text" name="email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5">
+                                        <textarea id="mesaj" rows="5" name="mesaj" placeholder="Mesajınız.."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group  ">
+                                <div class="row mt-4">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-5 mx-2 gender">
+                                        <input class="mx-1" id="cns" type="radio" name="cns" checked value="Erkek"><strong>Erkek</strong>
+                                        <input class="mx-1" id="cns" type="radio" name="cns" value="Kadın"><strong>Kadın </strong>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group   mt-4 buttons ">
+                                <div class="col-md-3"></div>
+
+                                <button class="btn btn-danger  " type="reset">Temizle</button>
+                                <div class="mx-2"></div>
+
+                                <button class="btn btn-success sendBtn" onclick="kontrol()" type="button">Gönder</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        /* https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript burdan alındı kod  */
+        const validateEmail = function(email) {
+            return String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
+
+        function kontrol() {
+            var sendBtn = document.querySelector(".sendBtn")
+            console.log(sendBtn)
+            var isim = document.getElementById("ad").value;
+            var soyad = document.getElementById("soyad").value;
+            var doğum = document.getElementById("doğum").value;
+            var eğitim = document.getElementById("eğitim").value;
+            var email = document.getElementById("email").value;
+            var mesaj = document.getElementById("mesaj").value;
+
+            if (isim == null || isim == "" || soyad == null || soyad == "" || doğum == null || doğum == "" || eğitim == null || eğitim == "" || mesaj == null || mesaj == "" || email == "") {
+                alert("Bütün Alanları Doldurmak Zorunludur.!");
+            }
+            if (!validateEmail(email)) {
+                alert("Email formatında degıl !");
+
+            } else {
+                sendBtn.setAttribute('type', 'submit');
+            }
+        }
+    </script>
+        <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
