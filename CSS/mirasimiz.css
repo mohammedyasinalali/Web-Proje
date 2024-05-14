@@ -196,38 +196,6 @@ p {
     box-sizing: border-box;
 }
 
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.4s linear;
-}
-
-a:hover {
-    color: var(--yellow-color);
-}
-
-.hero-title,
-.cv-link {
-    border-radius: var(--border-radius-medium);
-    color: var(--primary-color);
-    display: block;
-    margin: 0.5rem 0;
-    padding: 0.5rem 2rem 1.5rem 2rem;
-    font-size: 2.9 em;
-}
-
-.cv-link {
-    background: var(--primary-color);
-    color: var(--yellow-color);
-    font-size: var(--h4-font-size);
-    padding: 0.5rem 2rem 1rem 2rem;
-    width: fit-content;
-}
-
-.cv-link:hover {
-    background: var(--yellow-color);
-    color: var(--primary-color);
-}
 
 /* Menu */
 
@@ -260,63 +228,165 @@ a:hover {
     outline: none;
 }
 
-.hero .container .row .image {
-    background-color: var(--primary-color);
-    border-radius: 200px 20px 300px 20px;
-    overflow: hidden;
-    position: relative;
-    margin-top: 30px;
-    z-index: -10;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Orelega+One&display=swap');
+
+.sehrim h5 {
+    font-family: 'Orelega One', cursive;
+    margin: 30px 0;
+    font-size: 1.5rem;
 }
 
-.hero .container .row .image::before,
-.hero .container .row .image::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
-
-.hero .container .row .image::before {
-    width: 250px;
-    height: 250px;
+.sehrim h6 {
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+    color: var(--primary-color);
+    margin: 25px 0;
     background-color: var(--yellow-color);
-    z-index: -1;
-}
-
-.hero .container .row .image::after {
-    width: 350px;
-    height: 350px;
-    background-color: var(--btn-color);
-    z-index: -5;
-}
-
-.hero .container .row img {
+    padding: 10px;
     width: 100%;
 }
 
 
+/* slider için  */
 
-.mailfooter p {
-    color: var(--primary-color);
-    background-color: var(--yellow-color);
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    margin: 0;
-    padding: 5px 0;
+.mySlides {
+    display: none
 }
 
-.about .container .row h3 {
-    font-size: 50px;
+img {
+    vertical-align: middle;
+    /* border: red solid 2px; */
+    position: relative;
+    height: 450px;
+    width: 800px;
 }
 
-.about .container .row .kendim p {
-    font-size: 30px;
+.slideshow-container {
+    width: 900px;
+    height: 450px;
+    position: relative;
+    /* border: red solid 2px; */
+    margin: 1rem auto;
 }
 
-.about .container .row .kendim ul {
-    font-size: 30px;
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 99;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    color: white !important;
 }
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    opacity: 0.8;
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    /* text-align: center; */
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dots-wrapper {
+    /* border: red solid 2px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgb(176, 176, 176);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
