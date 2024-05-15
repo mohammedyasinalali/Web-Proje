@@ -359,6 +359,15 @@ img {
 }
 
 
+.mailfooter p {
+    color: var(--primary-color);
+    background-color: var(--yellow-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 0;
+}
 
 
 /* Fading animation */

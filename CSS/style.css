@@ -236,7 +236,7 @@ a:hover {
     padding: 0.3rem 1rem;
     z-index: 99;
     width: 100%;
-}
+}  
 
 .navbar.scroll {
     background: var(--menu-bg-color);
