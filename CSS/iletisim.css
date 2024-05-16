@@ -50,6 +50,7 @@
     font-weight: bold;
     font-style: normal;
 }
+
 @keyframes wave {
     0% {
         margin-left: 0;
@@ -180,6 +181,7 @@ a:hover {
     display: flex;
     justify-content: center;
 }
+
 /* wave */
 
 html,
@@ -224,4 +226,14 @@ body {
     100% {
         margin-left: -1600px;
     }
+}
+
+.mailfooter p {
+    color: var(--primary-color);
+    background-color: var(--yellow-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    padding: 5px 0;
 }
