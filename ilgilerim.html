@@ -63,24 +63,29 @@
     </section>
 
 
-
+    <h2 class="artistTitle"></h2>
     <div class="artist"></div>
+    <h2 class="albumTitle"></h2>
     <div class="album"></div>
+    <h2 class="playlistTitle"></h2>
     <div class="playlist"></div>
 
     <script>
         const Artist = document.querySelector(".artist");
         const Album = document.querySelector(".album");
         const Playlist = document.querySelector(".playlist");
+        const ArtistTitle = document.querySelector(".artistTitle");
+        const AlbumTitle = document.querySelector(".albumTitle");
+        const PlaylistTitle = document.querySelector(".playlistTitle");
 
-        fetch('https://spotify-scraper.p.rapidapi.com/v1/home', { method: 'GET', headers: { 'x-rapidapi-key': '438dcaeabfmsh5af4e48c80209d2p1ba5e2jsn9ed7758bcbdd' } })
+        fetch('https://spotify-scraper.p.rapidapi.com/v1/home', { method: 'GET', headers: { 'x-rapidapi-key': '8fc7f12683msh529e50413058a24p1acd73jsnddb181b599f7' } })
             .then((response) => {
                 return response.json()
             })
             .then(data => {
                 data.sections.items.map((section, index) => {
                     if (index == 0) {
-                        Artist.innerHTML += `<h2>${section.title}</h2>`;
+                        ArtistTitle.innerHTML = section.title;
                         section.contents.items.map(artist => {
                             Artist.innerHTML += `<div>
                                 <h4>${artist.name}</h4>
@@ -89,7 +94,7 @@
                         });
                     }
                     else if (index == 1) {
-                        Album.innerHTML += `<h2>${section.title}</h2>`;
+                        AlbumTitle.innerHTML = section.title;
                         section.contents.items.map(album => {
                             Album.innerHTML += `<div>
                                 <h4>${album.name}</h4>
@@ -98,7 +103,7 @@
                         });
                     }
                     else if (index == 2) {
-                        Playlist.innerHTML += `<h2>${section.title}</h2>`;
+                        PlaylistTitle.innerHTML += section.title;
                         section.contents.items.map(playlist => {
                             Playlist.innerHTML += `<div>
                                 <h4>${playlist.name}</h4>

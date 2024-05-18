@@ -218,10 +218,120 @@ ul {
     outline: none;
 }
 
-.artist h2 {}
+    h2 {
+        color: var(--primary-color);
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-.artist div {}
+    .artist, .album, .playlist {
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 30px;
+    }
 
-.artist div h4 {}
+    .artist div, .playlist div {
+        background-color: var(--yellow-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+        padding: 10px;
+    }
 
-.artist div img {}
+    .artist div:hover, .playlist div:hover {
+        transform: translateY(-10px);
+    }
+
+    .album div {
+        display: flex;
+        align-items: center;
+        background-color: var(--yellow-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+
+    .album div:hover {
+        transform: translateY(-10px);
+    }
+
+    h4 {
+        margin: 10px;
+        font-size: 18px;
+        color: var(--btn-color);
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        display: block;
+    }
+
+    .artist img, .playlist img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .album img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .artist div, .playlist div {
+        width: calc(33.333% - 20px);
+    }
+
+    .album div {
+        width: calc(100% - 20px);
+    }
+
+    @media (max-width: 768px) {
+        .artist div, .playlist div {
+            width: calc(50% - 20px);
+        }
+
+        .album div {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .album img {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .artist div, .playlist div {
+            width: 100%;
+        }
+
+        .album div {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .album img {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
