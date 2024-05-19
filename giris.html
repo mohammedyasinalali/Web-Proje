@@ -17,50 +17,92 @@
     <link rel="stylesheet" href="CSS/giris.css">
 </head>
 
-<body class="login-page">
+<body class="girin-page">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a style="color: #004aad;" class="navbar-brand" href="#">MOHAMMED</a>
 
-    <main>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="login-block">
-            <h1>Giriş Yap</h1>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothScrol active">Hakkında</a>
+                    </li>
 
-            <form action="#">
+                    <li class="nav-item">
+                        <a href="ozgecmis.html" class="nav-link smoothScroll">Özgeçmis</a>
+                    </li>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope ti-email"></i></span>
-                        <input type="text" class="form-control" placeholder="E-posta adresiniz">
-                    </div>
+                    <li class="nav-item">
+                        <a href="sehirim.html" class="nav-link smoothScroll">Şehirim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mirasimiz.html" class="nav-link smoothScroll">Mirasimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ilgilerim.html" class="nav-link smoothScroll">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #004aad;" href="iletisim.html" class="nav-link smoothScroll">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="giris.html" class="custom-btn btn">Giriş Yap</a>
                 </div>
-
-                <hr class="hr-xs">
-
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
-                        <input type="password" class="form-control" placeholder="Bir parola seç">
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="submit">Üye olmak</button>
-
-                <div class="login-footer">
-                    <h6>veya kayıt olun</h6>
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fab fa-facebook "></i></a></li>
-                        <li><a class="google" href="#"><i class="fa-brands fa-google"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></i>"></i></a></li>
-                    </ul>
-                </div>
-
-            </form>
+            </div>
         </div>
+    </nav>
+    <!-- wave start -->
+<section class="wave">
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
+    </div>
+</section>
+<section class="about section-padding" id="about">
+    <div class="container">
+        <div class="row">
+            <!-- wave end -->
 
-        <div class="login-links">
-            <p class="text-center"> hesabınız var mı? <a class="txt-brand" href="giris.html">Giriş Yap</a></p>
-        </div>
-
-    </main>
+            <div class="container text-muted">
+                <form action="giris.php" method="POST" id="girin" novalidate="" name="girin">
+                    <h1 style="text-align: center;">Giriş Yap</h1>
+                    <br>
+                    <p><b>Kullanıcı Adı</b>
+                        <input id="id" name="id" class="form-control  px-3 py-3 shadow" type="email" required
+                            placeholder="kullanıcı adınızı giriniz">
+                    </p>
+                    <br>
+                    <p><b>Şifre</b>
+                        <input id="sifre" name="sifre" class="form-control px-3 py-3 shadow" type="password" required
+                            placeholder="şifrenizi giriniz">
+                    </p>
+                    <br>
+                    <p style="text-align: center;">
+                        <button type="button" onclick="kontrol()" class="btn btn-success girinBtn">Giriş Yap </button>
+                    </p>
+                </form>
+        
+            </div>
+        
+            <script>
+                function kontrol() {
+                    var girinBtn = document.querySelector(".girinBtn");
+                    var kullanici_adi = document.getElementById("id").value;
+                    var sifre = document.getElementById("sifre").value;
+                    if (sifre == null || sifre == "" || kullanici_adi == null || kullanici_adi == "") {
+                        alert("Bütün Alanları Doldurmak Zorunludur.!");
+                    } else {
+                        girinBtn.setAttribute('type', 'submit')
+                    }
+                }
+            </script>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>

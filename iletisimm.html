@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim sayfası </title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/Navbar.css">
+    <link rel="stylesheet" href="CSS/iletisim.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a style="color: #004aad;" class="navbar-brand" href="#">MOHAMMED</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothScrol active">Hakkında</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ozgecmis.html" class="nav-link smoothScroll">Özgeçmis</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="sehirim.html" class="nav-link smoothScroll">Şehirim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mirasimiz.html" class="nav-link smoothScroll">Mirasimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ilgilerim.html" class="nav-link smoothScroll">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: #004aad;" href="iletisim.html" class="nav-link smoothScroll">İletişim</a>
+                    </li>
+                </ul>
+
+                <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
+                    <a href="giris.html" class="custom-btn btn">Giriş Yap</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="about section-padding" id="about">
+        <section class="site-section bg-light">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <div class="section-heading text-center">
+                            <h1 class="text-muted mt-3">
+                                <center>İLETİŞİM</center>
+                            </h1>
+                            <form [formGroup]="iletisimForm" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                    <div class="row mt-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5">
+                                            <input id="ad" class="form-control" type="text" placeholder="Adınız..."
+                                                formControlName="ad" required>
+                                            <div *ngIf="iletisimForm.get('ad').invalid && (iletisimForm.get('ad').dirty || iletisimForm.get('ad').touched)"
+                                                class="alert alert-danger">
+                                                Adınızı giriniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row mt-3">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5">
+                                            <input id="soyad" class="form-control" placeholder="Soyadınız..."
+                                                type="text" formControlName="soyad" required>
+                                            <div *ngIf="iletisimForm.get('soyad').invalid && (iletisimForm.get('soyad').dirty || iletisimForm.get('soyad').touched)"
+                                                class="alert alert-danger">
+                                                Soyadınızı giriniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row mt-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5">
+                                            <input class="form-control" type="text" placeholder="Doğum Tarihiniz..."
+                                                formControlName="dogum" id="dogum">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5">
+                                            <select class="form-control" formControlName="egitim" id="egitim">
+                                                <option>İlkokul</option>
+                                                <option>Ortaokul</option>
+                                                <option>Lise</option>
+                                                <option>Üniversite</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row mt-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5 mx-1">
+                                            <input id="email" class="form-control" placeholder="Email Adresiniz..."
+                                                type="email" formControlName="email" required email>
+                                            <div *ngIf="iletisimForm.get('email').invalid && (iletisimForm.get('email').dirty || iletisimForm.get('email').touched)"
+                                                class="alert alert-danger">
+                                                Geçerli bir e-posta adresi giriniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row mt-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5">
+                                            <textarea id="mesaj" rows="5" formControlName="mesaj"
+                                                placeholder="Mesajınız.."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group  ">
+                                    <div class="row mt-4">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-5 mx-2 gender">
+                                            <input class="mx-1" id="cnsErkek" type="radio" formControlName="cns"
+                                                value="Erkek" checked><strong>Erkek</strong>
+                                            <input class="mx-1" id="cnsKadin" type="radio" formControlName="cns"
+                                                value="Kadın"><strong>Kadın
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group   mt-4 buttons ">
+                                    <div class="col-md-3"></div>
+
+                                    <button class="btn btn-danger" type="reset" (click)="onReset()">Temizle</button>
+                                    <div class="mx-2"></div>
+
+                                    <button class="btn btn-success sendBtn" type="submit"
+                                        [disabled]="!iletisimForm.valid">Gönder</button>
+                                </div>
+                            </form>
+
+                            <script>
+                                import { Component } from '@angular/core';
+                                import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+                                @Component({
+                                    selector: 'app-iletisim',
+                                    templateUrl: './iletisim.component.html',
+                                    styleUrls: ['./iletisim.component.css']
+                                })
+                                export class IletisimComponent {
+                                    constructor(fb) {
+                                        this.fb = fb;
+                                        this.iletisimForm = this.fb.group({
+                                            ad: ['', Validators.required],
+                                            soyad: ['', Validators.required],
+                                            dogum: [''],
+                                            egitim: [''],
+                                            email: ['', [Validators.required, Validators.email]],
+                                            mesaj: ['', Validators.required],
+                                            cns: ['Erkek']
+                                        });
+                                    }
+
+                                    onSubmit() {
+                                        if (this.iletisimForm.valid) {
+                                            console.log(this.iletisimForm.value);
+                                            // Send the form data to your backend (iletişim.php)
+                                        } else {
+                                            // Handle form errors (mark fields as touched, etc.)
+                                        }
+                                    }
+
+                                    onReset() {
+                                        this.iletisimForm.reset({ cns: 'Erkek' });
+                                    }
+                                }
+                            </script>
+                            <!-- SCRIPTS -->
+                            <script src="js/bootstrap.js"></script>
+
+
+</html>
