@@ -199,7 +199,6 @@ ul {
 .navbar.scroll {
     background: var(--menu-bg-color);
     padding: 0.5rem 1rem;
-    position: fixed;
     opacity: 1;
 }
 
@@ -235,11 +234,11 @@ section .container h2 {
 .hakkimda .container div {
     display: flex;
     justify-content: space-between;
-    margin-top:15px ;
-    margin-bottom:25px ;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
-.hakkimda .container div img{
+.hakkimda .container div img {
     border-radius: 6px;
 }
 
@@ -263,6 +262,7 @@ section .container h2 {
     .img-wrapper {
         flex-direction: column;
     }
+
     .img-wrapper img {
         width: 80%;
         margin: 1rem auto;
@@ -272,38 +272,35 @@ section .container h2 {
 /*---------------------------------------
      TESTIMONIALS               
   -----------------------------------------*/
-  
-  .testimonials-image {
+
+.testimonials-image {
     margin: 0 1rem 1rem 1rem;
     width: 250px;
-  }
-  
-  .testimonials-image img {
+}
+
+.testimonials-image img {
     border-radius: var(--border-radius-medium);
-  }
-  
-  .testimonials-info {
+}
+
+.testimonials-info {
     width: 100%;
-  }
-  
-  .testimonials .owl-theme .owl-nav.disabled+.owl-dots {
+}
+
+.testimonials .owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 2rem;
-  }
-  
-  .testimonials .owl-theme .owl-dots .owl-dot {
+}
+
+.testimonials .owl-theme .owl-dots .owl-dot {
     outline: none;
-  }
-  
-  .testimonials .owl-theme .owl-dots .owl-dot span {
+}
+
+.testimonials .owl-theme .owl-dots .owl-dot span {
     width: 30px;
     height: 3px;
     margin: 5px;
-  }
-  
-  .testimonials .owl-theme .owl-dots .owl-dot.active span,
-  .testimonials .owl-theme .owl-dots .owl-dot:hover span {
+}
+
+.testimonials .owl-theme .owl-dots .owl-dot.active span,
+.testimonials .owl-theme .owl-dots .owl-dot:hover span {
     background: var(--primary-color);
-  }
-
-
-
+}
